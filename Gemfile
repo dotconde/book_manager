@@ -16,11 +16,12 @@ gem "jsonapi-serializer", "~> 2.2"
 gem "kaminari", "~> 1.2"
 gem "rack-cors", "~> 2.0"
 
+gem "faker", "~> 3.4"
+
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
   gem "rspec-rails", "~> 7.0"
   gem "factory_bot_rails", "~> 6.4"
-  gem "faker", "~> 3.4"
   gem "rubocop-rails-omakase", require: false
   gem "brakeman", require: false
 end
