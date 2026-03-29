@@ -1,9 +1,9 @@
 FactoryBot.define do
   factory :book do
-    title { "MyString" }
-    author { "MyString" }
-    genre { "MyString" }
-    isbn { "MyString" }
-    total_copies { 1 }
+    title { Faker::Book.title }
+    author { Faker::Book.author }
+    genre { Faker::Book.genre }
+    isbn { Faker::Code.unique.isbn }
+    total_copies { 3 }
   end
 end
