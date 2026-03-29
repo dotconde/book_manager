@@ -1,0 +1,10 @@
+{
+  "ignored_warnings": [
+    {
+      "fingerprint": "ad433ff70ec1f238bedce9dca41f81e55cb96e6e14eb2cc2593f72a6ebcc9073",
+      "note": "Role is intentionally permitted - users can register as either member or librarian per requirements"
+    }
+  ],
+  "updated": "2026-03-29",
+  "brakeman_version": "8.0.4"
+}
