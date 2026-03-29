@@ -57,7 +57,7 @@ books_data = [
   { title: "The Handmaid's Tale", author: "Margaret Atwood", genre: "Dystopian", isbn: "978-0385490818", total_copies: 3 },
   { title: "Gone Girl", author: "Gillian Flynn", genre: "Mystery", isbn: "978-0307588371", total_copies: 2 },
   { title: "The Road", author: "Cormac McCarthy", genre: "Fiction", isbn: "978-0307387899", total_copies: 2 },
-  { title: "Becoming", author: "Michelle Obama", genre: "Biography", isbn: "978-1524763138", total_copies: 4 },
+  { title: "Becoming", author: "Michelle Obama", genre: "Biography", isbn: "978-1524763138", total_copies: 4 }
 ]
 
 books = books_data.map { |data| Book.create!(data) }

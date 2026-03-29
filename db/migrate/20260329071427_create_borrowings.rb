@@ -10,7 +10,7 @@ class CreateBorrowings < ActiveRecord::Migration[7.2]
       t.timestamps
     end
 
-    add_index :borrowings, [:user_id, :book_id]
+    add_index :borrowings, [ :user_id, :book_id ]
     add_index :borrowings, :due_date
     add_index :borrowings, :returned_at
   end

@@ -1,7 +1,7 @@
 module Api
   module V1
     class BooksController < ApplicationController
-      before_action :set_book, only: [:show, :update, :destroy]
+      before_action :set_book, only: [ :show, :update, :destroy ]
 
       def index
         books = policy_scope(Book).search(params[:search])
@@ -53,7 +53,6 @@ module Api
       def book_params
         params.require(:book).permit(:title, :author, :genre, :isbn, :total_copies)
       end
-
     end
   end
 end

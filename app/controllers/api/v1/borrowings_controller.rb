@@ -1,7 +1,7 @@
 module Api
   module V1
     class BorrowingsController < ApplicationController
-      before_action :set_borrowing, only: [:return]
+      before_action :set_borrowing, only: [ :return ]
 
       def index
         borrowings = policy_scope(Borrowing).includes(:user, :book)
@@ -10,7 +10,7 @@ module Api
 
         render json: BorrowingSerializer.new(
           borrowings,
-          include: [:user, :book],
+          include: [ :user, :book ],
           meta: pagination_meta(borrowings)
         ).serializable_hash, status: :ok
       end
@@ -22,7 +22,7 @@ module Api
         if borrowing.save
           render json: BorrowingSerializer.new(
             borrowing,
-            include: [:book]
+            include: [ :book ]
           ).serializable_hash, status: :created
         else
           render json: { errors: borrowing.errors.full_messages }, status: :unprocessable_entity
@@ -33,14 +33,14 @@ module Api
         authorize @borrowing
 
         if @borrowing.returned_at.present?
-          render json: { errors: ["This borrowing has already been returned"] }, status: :unprocessable_entity
+          render json: { errors: [ "This borrowing has already been returned" ] }, status: :unprocessable_entity
           return
         end
 
         @borrowing.update!(returned_at: Time.current)
         render json: BorrowingSerializer.new(
           @borrowing,
-          include: [:user, :book]
+          include: [ :user, :book ]
         ).serializable_hash, status: :ok
       end
 
@@ -66,7 +66,6 @@ module Api
           borrowings
         end
       end
-
     end
   end
 end
