@@ -16,7 +16,7 @@ gem "jsonapi-serializer", "~> 2.2"
 gem "kaminari", "~> 1.2"
 gem "rack-cors", "~> 2.0"
 
-gem "faker", "~> 3.4"
+gem "faker", "~> 3.8"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
